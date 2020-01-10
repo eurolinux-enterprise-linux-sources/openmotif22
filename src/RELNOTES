@@ -1,0 +1,138 @@
+
+                             OpenMotif 2.2.3
+
+                              Release Notes
+
+This document functions as the release notes for OpenMotif 2.2.3. It contains 
+information on what is new in OpenMotif 2.2.3. Please see the COPYRIGHT.MOTIF 
+file included with this release copying and licensing information.
+
+Introduction
+
+This document and the accompanying text files contain important information. 
+Please read them carefully before starting the build and installation 
+procedures.
+
+
+1. What is OpenMotif?
+
+OSF/Motif is the standard user interface toolkit available on Unix and Linux. 
+OpenMotif is a source code distribution version of Motif that is available under 
+an open source license. OpenMotif is built on top of the standard X Toolkit (Xt) 
+and X11 libraries.
+
+1.1. Overview of Open Motif 2.2.3
+
+OpenMotif 2.2.3 is an updated version of 2.2.2. Any applications built against a 
+previous 2.2.X release of OpenMotif will be compatible with this new release. 
+You can choose to build this release from source code. Alternatively, pre-built 
+binary distributions are available for a variety of platforms. Please visit 
+http://www.motifzone.net for details. 
+
+The source distribution contains the following items:
+- LibXm source code and include files
+- OpenMotif reference documentation (man pages)
+- Utility libraries
+- Demo programs
+
+
+2. What is new in OpenMotif 2.2.3?
+
+This is a bug fixing release.  See Section 6 for the list of changes that have 
+been introduced to OpenMotif in this version. All libraries used in this release 
+are compatible with previous Motif 2.2 releases.
+
+
+
+3. Motif Distribution
+
+3.1. Motif Source Tree
+
+The general layout of OpenMotif is the following:
+bitmaps/	various XMB files
+clients/ 	mwm, uil, xmbind
+config/		configuration, make files
+demos/ 		various supported (and unsupported) demos
+doc/  		man pages
+include/ 	included files for building and using Open Motif
+lib/		source files for the OpenMotif libraries
+localized/ 	localization support
+tools/  	WML support
+BUGREPORT	template file for submitting bugs
+README		configure building/installation instructions using 
+		configure  
+RELNOTES 	this file
+
+
+
+3.2 Build Systems
+
+As of 2.2.3, OpenMotif is built using Auto Tools. Imake is no longer a supported 
+mechanism for building OpenMotif. OpenMotif 2.2.3 has been built and tested on 
+the following systems:
+- Linux 2.4 (Redhat 8.0)
+- Linux 2.4 (Redhat 9)
+- Linux 2.4 (Mandrake 9.2)
+- Linux 2.4 (Mandrake 10)
+- Linux 2.4 (SuSE 8.2)
+In all cases, the vendor's supplied compiler was used.
+
+
+4. Filing Bug Reports
+
+If you find a reproducible bug in any of the OpenMotif libraries or code, or an 
+error in the documentation, please reference the BUGREPORT  file and/or submit a 
+bug report online at the MotifZone:  http://bugs.motifzone.net
+
+
+5. Documentation
+
+For additional current documentation, please see http://www.motifzone.net/docs
+
+
+6. Change Log
+
+Here is the list of changes that have been introduced in this version of the 
+toolkit.
+- Fixed many compilation warnings in Xm
+- Removed incorrect includes in public header files
+- Renamed widget Ext18List to MultiList
+- Renamed Ext18List demo program to MultiList
+- Renamed widget CombinationBox2 to DropDown
+- Renamed ComboBox2 demo program to DropDown
+- Fixed compilation failures in FontSelector, MultiList, and xmanimate demo 
+programs
+- Added thread safety calls to ButtonBox, ColorSelector, Column, DropDown, 
+DataField, FontSelector, MultiList, IconBox, IconButton, Panned, TabBox, 
+TabStack, Hierarchy, Outline, and Tree
+- Moved definitions in xmstring.list from XmStrDefsI.h to XmStrDefs.h
+- Removed invalid definitions
+- Fixed bug #278 (Man page for XmText does not display tables)
+- Fixed bug #1013 (XmDrawnButton page describes hierarchy for 
+bulletinboard)
+- Fixed bug #1131 (64-bit int/long botch in XmRenderT.c)
+- Fixed bug #1139 (XmNotebook doesn't resize tabs)
+- Fixed bug #1152 (64-bit int/long botch in XmRenderT.c)
+- Fixed bug #1153 (Don't let the tooltip run off the right/bottom of the 
+screen)
+- Fixed bug #1154 (RadioBox button fails to select button if button is set 
+from callback)
+- Fixed bug #1164 (RadioBox XmRowColumn ignores XmNradioAlwaysOne)
+- Fixed bug #1166 (Double-click on a MultiList does not consistently 
+register a double-click event)
+- Fixed bug #1170 (DropDown desensitization/sensitization)
+- Fixed bugs #1172, #1173, #1188, and several other bugs in ToggleButton.
+- Fixed bug #1181 (Linux Motif binaries do not work with Solaris/Xsun 
+Xserver)
+- Fixed bug #1183 (XmNpageNumber when set on a MajorTab widget will crash 
+the application)
+- Fixed bug #1197 (Compilation Error due to bad syntax in yacc file)
+- Fixed bug #1205 (Bug in man-page of XmManager)
+- Fixed bug #1168 (DeAssocNavigator warning when destroying widgets that 
+have XmScrolledWindow)
+- Fixed bug #1184 (XmScrolledText widget no longer has vertical scrollbar)
+- Fixed bug #1206 (XmNpopupHandlerCallback of XmContainer not called)
+- Fixed bug #1207 (Extending selection using scrolled text widgets scrolls 
+up too fast)
+- Fixed bug #1232 (Race condition in ToolTip code can cause crashes, even
+if no tooltips are used)
